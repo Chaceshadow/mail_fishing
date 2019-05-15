@@ -1,0 +1,35 @@
+修改index.html中
+
+<form action="index.php/index/index/input" method="post">
+
+
+访问的页面是
+
+
+http://127.0.0.1/mail/public/index.php
+
+输入用户名和密码
+跳转的页面是
+
+
+
+http://127.0.0.1/mail/public/index.php/index/index/input
+
+欢迎参加安全意识培训。
+
+
+http://127.0.0.1/mail/public/superhack/index/search?key=fcvxz657o54ewn123cvb432lg
+
+查看中招用户
+
+需要修改public/.htaccess
+
+<IfModule mod_rewrite.c>
+  Options +FollowSymlinks -Multiviews
+  RewriteEngine On
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  
+  RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
+</IfModule>
